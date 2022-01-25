@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { InputGroup, FormControl, Button } from "react-bootstrap";
 import { Users } from "./data/Users";
-import "./assets/css/landingGuest.css";
+import "./assets/css/app.css";
 
 import Navbar from "./components/Navbar";
 import CustomModal from "./components/Modal";
@@ -36,12 +36,8 @@ export default function App() {
             onChange={(e) => handleSearch(e)}
             placeholder="Filter Results"
           />
-          <Button style={{ backgroundColor: "#3e4095" }} id="button-addon2">
-            Search
-          </Button>
         </InputGroup>
       </div>
-
       <div className="guest_body">
         <div className="guest_body_left">
           {showModal && <CustomModal modal={"login"} setShow={setShow} />}

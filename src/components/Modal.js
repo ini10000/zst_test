@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Button from "./Button";
 import Input from "./Input";
 
-import "../assets/css/modal.css";
-import "../assets/css/landingGuest.css";
 import Close from "../assets/images/Close.png";
+import "../assets/css/modal.css";
+import "../assets/css/app.css";
 
 export default function CustomModal({ setShow, modal }) {
   const [email, setEmail] = useState("");
