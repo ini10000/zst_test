@@ -7,7 +7,7 @@ import "../assets/css/modal.css";
 import "../assets/css/app.css";
 
 export default function CustomModal({ setShow, modal }) {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
@@ -31,10 +31,10 @@ export default function CustomModal({ setShow, modal }) {
           {modal === "login" ? (
             <div>
               <Input
-                onChange={(e) => setEmail(e.target.value)}
-                label="E-mail Address"
-                name="email"
-                type="email"
+                onChange={(e) => setUsername(e.target.value)}
+                label="Username"
+                name="username"
+                type="text"
               />
               <Input
                 onChange={(e) => setPassword(e.target.value)}
@@ -64,7 +64,7 @@ export default function CustomModal({ setShow, modal }) {
               click={(e) => {
                 e.preventDefault();
                 modal === "login"
-                  ? email === "user" && password === "password"
+                  ? username === "user" && password === "password"
                     ? setShow(false)
                     : setInvalid(true)
                   : !name && !message
